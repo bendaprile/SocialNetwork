@@ -42,9 +42,9 @@ public class PostTest {
         Post newPostMinutes = new Post(null, "This is my post 3 minutes ago.", LocalDateTime.now().minus(3, ChronoUnit.MINUTES));
         Post newPostSeconds = new Post(null, "This is my post 3 minutes ago.", LocalDateTime.now().minus(3, ChronoUnit.SECONDS));
 
-        assert newPostDays.calculateTimeSincePost().equals("3 days ago");
-        assert newPostHours.calculateTimeSincePost().equals("3 hours ago");
-        assert newPostMinutes.calculateTimeSincePost().equals("3 minutes ago");
-        assert newPostSeconds.calculateTimeSincePost().equals("3 seconds ago");
+        assert newPostDays.calculateTimeSincePost().equals("(3 days ago)");
+        assert newPostHours.calculateTimeSincePost().equals("(3 hours ago)");
+        assert newPostMinutes.calculateTimeSincePost().equals("(3 minutes ago)");
+        assert newPostSeconds.calculateTimeSincePost().equals("(3 seconds ago)");
     }
 }
